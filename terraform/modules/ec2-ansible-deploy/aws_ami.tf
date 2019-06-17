@@ -17,3 +17,4 @@ data "aws_ami" "centos" {
     values = ["ebs"]
   }
 }
+
