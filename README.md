@@ -13,3 +13,12 @@ Prerequisites:
 
 - Clone git repo to you machine and copy your pem file to the diretory
 - Run "terraform apply"
+
+# Docker
+- Clone git repo to you machine 
+- Build the docker image
+-- docker build -t webapp-image:v1 .
+-Run docker image
+-- docker run -d -p 80:80 webapp-image:v1
+-Run docker compose 
+-- docker-compose up 
