@@ -1,0 +1,7 @@
+version: '3.2'
+
+services:
+  nginx:
+    image: sbuyakar/webapp-image:firstimage
+    ports:
+      - 80:80
