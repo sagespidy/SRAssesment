@@ -3,8 +3,7 @@ FROM alpine:latest
 RUN set -x \
     && apk --no-cache update \
     && apk upgrade \
-    && apk --no-cache add bash alpine-sdk nodejs-npm xvfb chromium bzip2 python python-dev libressl-dev libffi-dev unzip py-pip \
-    && pip install ansible boto boto3 awscli \
+    && apk --no-cache add alpine-sdk bash nodejs-npm xvfb chromium bzip2 python python-dev libressl-dev libffi-dev unzip py-pip \
     && rm -rf /var/cache/apk/*
 
 ADD scripts/xvfb-chrome /usr/bin/xvfb-chrome
