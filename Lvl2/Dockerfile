@@ -1,9 +1,6 @@
 FROM alpine:latest
 
-RUN set -x \
-    && apk --no-cache update \
-    && apk upgrade \
-    && apk --no-cache add alpine-sdk bash nodejs-npm xvfb chromium bzip2 python python-dev libressl-dev libffi-dev unzip py-pip \
+RUN apk --no-cache add alpine-sdk bash nodejs-npm xvfb chromium python python-dev libressl-dev libffi-dev \
     && rm -rf /var/cache/apk/*
 
 ADD scripts/xvfb-chrome /usr/bin/xvfb-chrome
